@@ -58,7 +58,7 @@ class Yaml extends AbstractStorage
     public function next()
     {
         $recording = $this->yamlParser->parse($this->readNextRecord());
-        $this->current = $recording[0];
+        $this->current = $recording[0] ?? null;
         ++$this->position;
     }
 
